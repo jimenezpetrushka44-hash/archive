@@ -1,0 +1,201 @@
+﻿track_id,track_name,artists,popularity,danceability,energy,valence,tempo,mood,feature_source
+moodify_0001,"yes, and?",Ariana Grande,74,0.83,0.773,0.743,91.6,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0002,we can't be friends (wait for your love),Ariana Grande,92,0.232,0.256,0.181,85.7,Sad / Melancholic,Synthetic project features; not official Spotify metrics
+moodify_0003,the boy is mine,Ariana Grande,80,0.789,0.697,0.827,123.5,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0004,positions,Ariana Grande,92,0.674,0.708,0.727,90.2,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0005,34+35,Ariana Grande,78,0.727,0.63,0.641,86.3,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0006,pov,Ariana Grande,72,0.206,0.311,0.11,148.6,Sad / Melancholic,Synthetic project features; not official Spotify metrics
+moodify_0007,Into You,Ariana Grande,87,0.804,0.839,0.659,81.3,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0008,Dangerous Woman,Ariana Grande,81,0.676,0.89,0.384,143.0,Intense / Powerful,Synthetic project features; not official Spotify metrics
+moodify_0009,no tears left to cry,Ariana Grande,69,0.731,0.751,0.731,139.8,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0010,God is a woman,Ariana Grande,82,0.585,0.825,0.227,130.6,Intense / Powerful,Synthetic project features; not official Spotify metrics
+moodify_0011,breathin,Ariana Grande,60,0.906,0.911,0.805,99.4,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0012,"thank u, next",Ariana Grande,94,0.224,0.185,0.162,127.8,Sad / Melancholic,Synthetic project features; not official Spotify metrics
+moodify_0013,7 rings,Ariana Grande,83,0.816,0.902,0.705,109.1,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0014,One Last Time,Ariana Grande,87,0.498,0.431,0.522,82.6,Calm / Chill,Synthetic project features; not official Spotify metrics
+moodify_0015,Break Free,Ariana Grande,60,0.827,0.816,0.848,89.0,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0016,Problem,Ariana Grande,60,0.779,0.694,0.806,98.9,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0017,Love Me Harder,Ariana Grande,63,0.709,0.657,0.751,130.2,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0018,Be Alright,Ariana Grande,92,0.758,0.907,0.704,83.0,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0019,Side to Side,Ariana Grande,64,0.815,0.852,0.845,139.4,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0020,imperfect for you,Ariana Grande,88,0.368,0.27,0.505,120.1,Calm / Chill,Synthetic project features; not official Spotify metrics
+moodify_0021,Espresso,Sabrina Carpenter,64,0.75,0.681,0.642,128.6,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0022,Please Please Please,Sabrina Carpenter,77,0.781,0.727,0.898,112.1,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0023,Taste,Sabrina Carpenter,83,0.824,0.847,0.891,119.1,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0024,Bed Chem,Sabrina Carpenter,77,0.771,0.824,0.693,83.6,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0025,Juno,Sabrina Carpenter,68,0.948,0.821,0.879,112.9,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0026,Good Graces,Sabrina Carpenter,80,0.746,0.791,0.69,102.6,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0027,Feather,Sabrina Carpenter,85,0.671,0.647,0.894,148.4,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0028,Nonsense,Sabrina Carpenter,92,0.921,0.819,0.901,107.4,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0029,because i liked a boy,Sabrina Carpenter,60,0.279,0.255,0.226,134.7,Sad / Melancholic,Synthetic project features; not official Spotify metrics
+moodify_0030,Fast Times,Sabrina Carpenter,70,0.702,0.604,0.72,124.8,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0031,Skin,Sabrina Carpenter,92,0.565,0.605,0.676,108.1,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0032,Sue Me,Sabrina Carpenter,70,0.739,0.882,0.635,99.6,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0033,Thumbs,Sabrina Carpenter,80,0.786,0.82,0.824,123.7,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0034,Almost Love,Sabrina Carpenter,73,0.814,0.799,0.913,80.6,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0035,Paris,Sabrina Carpenter,70,0.545,0.605,0.655,121.3,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0036,Read your Mind,Sabrina Carpenter,83,0.811,0.823,0.889,107.1,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0037,Already Over,Sabrina Carpenter,85,0.621,0.688,0.694,98.3,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0038,Sharpest Tool,Sabrina Carpenter,78,0.529,0.229,0.65,115.0,Calm / Chill,Synthetic project features; not official Spotify metrics
+moodify_0039,Dumb & Poetic,Sabrina Carpenter,96,0.815,0.885,0.755,138.8,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0040,Coincidence,Sabrina Carpenter,77,0.797,0.759,0.883,113.2,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0041,BIRDS OF A FEATHER,Billie Eilish,71,0.683,0.681,0.795,146.8,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0042,WILDFLOWER,Billie Eilish,77,0.235,0.304,0.197,101.6,Sad / Melancholic,Synthetic project features; not official Spotify metrics
+moodify_0043,LUNCH,Billie Eilish,94,0.723,0.825,0.782,95.7,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0044,CHIHIRO,Billie Eilish,80,0.71,0.655,0.711,129.2,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0045,SKINNY,Billie Eilish,60,0.425,0.396,0.284,112.2,Sad / Melancholic,Synthetic project features; not official Spotify metrics
+moodify_0046,THE GREATEST,Billie Eilish,96,0.637,0.615,0.792,95.1,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0047,bad guy,Billie Eilish,90,0.656,0.873,0.262,91.0,Intense / Powerful,Synthetic project features; not official Spotify metrics
+moodify_0048,lovely,Billie Eilish,88,0.226,0.415,0.114,87.3,Sad / Melancholic,Synthetic project features; not official Spotify metrics
+moodify_0049,when the party's over,Billie Eilish,63,0.334,0.483,0.173,105.6,Sad / Melancholic,Synthetic project features; not official Spotify metrics
+moodify_0050,everything i wanted,Billie Eilish,91,0.284,0.368,0.115,104.1,Sad / Melancholic,Synthetic project features; not official Spotify metrics
+moodify_0051,Happier Than Ever,Billie Eilish,94,0.505,0.844,0.187,144.6,Intense / Powerful,Synthetic project features; not official Spotify metrics
+moodify_0052,Therefore I Am,Billie Eilish,95,0.668,0.614,0.766,141.8,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0053,ocean eyes,Billie Eilish,98,0.472,0.214,0.612,137.8,Calm / Chill,Synthetic project features; not official Spotify metrics
+moodify_0054,idontwannabeyouanymore,Billie Eilish,97,0.805,0.739,0.793,107.9,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0055,bury a friend,Billie Eilish,84,0.578,0.948,0.322,83.9,Intense / Powerful,Synthetic project features; not official Spotify metrics
+moodify_0056,my future,Billie Eilish,76,0.479,0.338,0.454,94.0,Calm / Chill,Synthetic project features; not official Spotify metrics
+moodify_0057,Your Power,Billie Eilish,81,0.536,0.264,0.686,149.5,Calm / Chill,Synthetic project features; not official Spotify metrics
+moodify_0058,What Was I Made For?,Billie Eilish,72,0.278,0.354,0.124,80.0,Sad / Melancholic,Synthetic project features; not official Spotify metrics
+moodify_0059,No Time To Die,Billie Eilish,85,0.458,0.39,0.546,88.6,Calm / Chill,Synthetic project features; not official Spotify metrics
+moodify_0060,ilomilo,Billie Eilish,86,0.692,0.662,0.694,110.9,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0061,Blinding Lights,The Weeknd,95,0.856,0.881,0.874,114.1,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0062,Save Your Tears,The Weeknd,91,0.717,0.788,0.781,81.2,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0063,Starboy,The Weeknd,78,0.721,0.871,0.385,101.6,Intense / Powerful,Synthetic project features; not official Spotify metrics
+moodify_0064,Die For You,The Weeknd,65,0.723,0.77,0.79,78.9,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0065,The Hills,The Weeknd,74,0.602,0.833,0.476,151.5,Intense / Powerful,Synthetic project features; not official Spotify metrics
+moodify_0066,Can't Feel My Face,The Weeknd,90,0.607,0.688,0.718,84.6,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0067,I Feel It Coming,The Weeknd,94,0.766,0.849,0.788,142.7,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0068,Call Out My Name,The Weeknd,69,0.429,0.345,0.345,121.8,Sad / Melancholic,Synthetic project features; not official Spotify metrics
+moodify_0069,After Hours,The Weeknd,85,0.373,0.315,0.377,145.4,Sad / Melancholic,Synthetic project features; not official Spotify metrics
+moodify_0070,In Your Eyes,The Weeknd,65,0.627,0.613,0.731,153.6,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0071,Take My Breath,The Weeknd,95,0.85,0.776,0.916,136.0,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0072,Out of Time,The Weeknd,70,0.573,0.37,0.61,105.0,Calm / Chill,Synthetic project features; not official Spotify metrics
+moodify_0073,Less Than Zero,The Weeknd,86,0.635,0.651,0.624,127.8,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0074,Is There Someone Else?,The Weeknd,76,0.571,0.685,0.63,102.1,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0075,Sacrifice,The Weeknd,76,0.362,0.211,0.423,126.3,Calm / Chill,Synthetic project features; not official Spotify metrics
+moodify_0076,Earned It,The Weeknd,87,0.708,0.698,0.906,91.7,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0077,Often,The Weeknd,60,0.79,0.691,0.877,142.2,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0078,Heartless,The Weeknd,84,0.513,0.893,0.285,126.8,Intense / Powerful,Synthetic project features; not official Spotify metrics
+moodify_0079,Reminder,The Weeknd,83,0.707,0.763,0.754,102.4,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0080,Wicked Games,The Weeknd,90,0.257,0.444,0.209,134.0,Sad / Melancholic,Synthetic project features; not official Spotify metrics
+moodify_0081,360,Charli xcx,87,0.732,0.725,0.708,96.4,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0082,365,Charli xcx,71,0.653,0.879,0.244,85.7,Intense / Powerful,Synthetic project features; not official Spotify metrics
+moodify_0083,Apple,Charli xcx,67,0.844,0.813,0.806,149.6,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0084,Von dutch,Charli xcx,65,0.561,0.943,0.32,84.0,Intense / Powerful,Synthetic project features; not official Spotify metrics
+moodify_0085,"Girl, so confusing",Charli xcx,81,0.588,0.64,0.634,78.8,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0086,Sympathy is a knife,Charli xcx,95,0.801,0.828,0.894,126.0,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0087,party 4 u,Charli xcx,83,0.375,0.444,0.491,87.4,Calm / Chill,Synthetic project features; not official Spotify metrics
+moodify_0088,Boom Clap,Charli xcx,83,0.812,0.772,0.76,134.7,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0089,1999,Charli xcx,65,0.865,0.873,0.732,150.4,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0090,Unlock It,Charli xcx,83,0.64,0.615,0.768,98.8,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0091,Vroom Vroom,Charli xcx,78,0.571,0.877,0.287,142.2,Intense / Powerful,Synthetic project features; not official Spotify metrics
+moodify_0092,Speed Drive,Charli xcx,69,0.661,0.749,0.628,91.0,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0093,Good Ones,Charli xcx,61,0.61,0.685,0.721,85.3,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0094,Beg for You,Charli xcx,62,0.796,0.738,0.817,139.2,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0095,Used to Know Me,Charli xcx,74,0.851,0.839,0.737,143.0,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0096,Forever,Charli xcx,70,0.536,0.193,0.694,84.7,Calm / Chill,Synthetic project features; not official Spotify metrics
+moodify_0097,Claws,Charli xcx,61,0.709,0.623,0.682,129.3,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0098,Track 10,Charli xcx,98,0.848,0.809,0.699,144.6,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0099,Talk talk,Charli xcx,74,0.799,0.71,0.829,99.0,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0100,Club classics,Charli xcx,70,0.475,0.786,0.197,150.5,Intense / Powerful,Synthetic project features; not official Spotify metrics
+moodify_0101,Rush,Troye Sivan,65,0.502,0.912,0.187,149.5,Intense / Powerful,Synthetic project features; not official Spotify metrics
+moodify_0102,One of Your Girls,Troye Sivan,86,0.674,0.644,0.863,141.8,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0103,Got Me Started,Troye Sivan,62,0.847,0.725,0.879,143.6,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0104,Youth,Troye Sivan,97,0.833,0.678,0.81,108.7,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0105,My My My!,Troye Sivan,63,0.796,0.853,0.845,91.1,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0106,Bloom,Troye Sivan,63,0.822,0.837,0.842,133.2,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0107,Dance To This,Troye Sivan,60,0.791,0.646,0.805,80.7,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0108,Angel Baby,Troye Sivan,87,0.424,0.355,0.692,110.3,Calm / Chill,Synthetic project features; not official Spotify metrics
+moodify_0109,Easy,Troye Sivan,84,0.437,0.31,0.548,125.2,Calm / Chill,Synthetic project features; not official Spotify metrics
+moodify_0110,STUD,Troye Sivan,87,0.877,0.899,0.729,109.5,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0111,Lucky Strike,Troye Sivan,87,0.749,0.88,0.637,115.5,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0112,Wild,Troye Sivan,70,0.782,0.731,0.744,110.0,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0113,Strawberries & Cigarettes,Troye Sivan,68,0.624,0.422,0.662,141.7,Calm / Chill,Synthetic project features; not official Spotify metrics
+moodify_0114,Take Yourself Home,Troye Sivan,64,0.711,0.769,0.672,127.0,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0115,What's The Time Where You Are?,Troye Sivan,92,0.938,0.916,0.911,144.0,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0116,Honey,Troye Sivan,60,0.795,0.682,0.917,107.9,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0117,In My Room,Troye Sivan,71,0.743,0.763,0.892,82.7,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0118,Could Cry Just Thinkin About You,Troye Sivan,71,0.304,0.467,0.27,140.9,Sad / Melancholic,Synthetic project features; not official Spotify metrics
+moodify_0119,FOOLS,Troye Sivan,78,0.734,0.629,0.764,84.1,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0120,HEAVEN,Troye Sivan,78,0.787,0.889,0.734,141.4,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0121,I'm Still Standing,Elton John,86,0.648,0.673,0.678,136.7,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0122,Rocket Man,Elton John,98,0.478,0.428,0.686,113.4,Calm / Chill,Synthetic project features; not official Spotify metrics
+moodify_0123,Tiny Dancer,Elton John,72,0.448,0.318,0.714,138.4,Calm / Chill,Synthetic project features; not official Spotify metrics
+moodify_0124,Your Song,Elton John,74,0.333,0.358,0.255,114.6,Sad / Melancholic,Synthetic project features; not official Spotify metrics
+moodify_0125,Bennie and the Jets,Elton John,92,0.707,0.615,0.744,135.4,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0126,Crocodile Rock,Elton John,80,0.79,0.805,0.893,114.0,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0127,Don't Go Breaking My Heart,Elton John,69,0.844,0.818,0.67,103.5,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0128,Goodbye Yellow Brick Road,Elton John,87,0.227,0.31,0.226,90.3,Sad / Melancholic,Synthetic project features; not official Spotify metrics
+moodify_0129,Daniel,Elton John,81,0.422,0.205,0.582,83.7,Calm / Chill,Synthetic project features; not official Spotify metrics
+moodify_0130,Saturday Night's Alright for Fighting,Elton John,77,0.572,0.866,0.263,91.3,Intense / Powerful,Synthetic project features; not official Spotify metrics
+moodify_0131,Sacrifice,Elton John,74,0.371,0.203,0.491,153.8,Calm / Chill,Synthetic project features; not official Spotify metrics
+moodify_0132,I Guess That's Why They Call It the Blues,Elton John,96,0.8,0.879,0.785,78.2,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0133,Don't Let the Sun Go Down on Me,Elton John,90,0.661,0.665,0.633,124.9,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0134,Candle in the Wind,Elton John,72,0.85,0.859,0.788,124.7,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0135,Philadelphia Freedom,Elton John,79,0.701,0.711,0.628,103.3,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0136,The Bitch Is Back,Elton John,60,0.84,0.851,0.64,97.9,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0137,Sorry Seems to Be the Hardest Word,Elton John,68,0.408,0.513,0.369,119.2,Sad / Melancholic,Synthetic project features; not official Spotify metrics
+moodify_0138,Circle of Life,Elton John,68,0.7,0.737,0.857,115.3,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0139,Can You Feel the Love Tonight,Elton John,65,0.376,0.24,0.53,131.4,Calm / Chill,Synthetic project features; not official Spotify metrics
+moodify_0140,Cold Heart,Elton John,71,0.872,0.791,0.78,101.2,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0141,Billie Jean,Michael Jackson,61,0.741,0.727,0.884,99.5,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0142,Beat It,Michael Jackson,65,0.611,0.722,0.473,145.3,Intense / Powerful,Synthetic project features; not official Spotify metrics
+moodify_0143,Thriller,Michael Jackson,92,0.608,0.795,0.345,90.2,Intense / Powerful,Synthetic project features; not official Spotify metrics
+moodify_0144,Smooth Criminal,Michael Jackson,66,0.862,0.846,0.741,115.4,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0145,Bad,Michael Jackson,71,0.594,0.87,0.263,138.8,Intense / Powerful,Synthetic project features; not official Spotify metrics
+moodify_0146,Man in the Mirror,Michael Jackson,60,0.462,0.392,0.532,123.7,Calm / Chill,Synthetic project features; not official Spotify metrics
+moodify_0147,The Way You Make Me Feel,Michael Jackson,96,0.686,0.848,0.681,153.5,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0148,Black or White,Michael Jackson,80,0.702,0.806,0.761,91.0,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0149,Rock with You,Michael Jackson,65,0.842,0.776,0.796,96.7,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0150,Don't Stop 'Til You Get Enough,Michael Jackson,90,0.835,0.648,0.824,123.7,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0151,Human Nature,Michael Jackson,83,0.314,0.372,0.301,124.7,Sad / Melancholic,Synthetic project features; not official Spotify metrics
+moodify_0152,P.Y.T. (Pretty Young Thing),Michael Jackson,80,0.798,0.634,0.917,113.5,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0153,Remember the Time,Michael Jackson,71,0.85,0.616,0.92,104.7,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0154,Dirty Diana,Michael Jackson,97,0.653,0.783,0.406,85.5,Intense / Powerful,Synthetic project features; not official Spotify metrics
+moodify_0155,Earth Song,Michael Jackson,78,0.382,0.513,0.265,132.2,Sad / Melancholic,Synthetic project features; not official Spotify metrics
+moodify_0156,You Are Not Alone,Michael Jackson,73,0.2,0.204,0.128,149.5,Sad / Melancholic,Synthetic project features; not official Spotify metrics
+moodify_0157,Wanna Be Startin' Somethin',Michael Jackson,62,0.598,0.62,0.745,93.6,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0158,Heal the World,Michael Jackson,62,0.487,0.319,0.51,130.2,Calm / Chill,Synthetic project features; not official Spotify metrics
+moodify_0159,They Don't Care About Us,Michael Jackson,80,0.569,0.778,0.16,125.1,Intense / Powerful,Synthetic project features; not official Spotify metrics
+moodify_0160,Love Never Felt So Good,Michael Jackson,71,0.789,0.687,0.887,100.0,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0161,Abracadabra,Lady Gaga,83,0.864,0.816,0.749,86.4,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0162,Die With A Smile,Lady Gaga,60,0.654,0.627,0.77,122.5,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0163,Bad Romance,Lady Gaga,64,0.683,0.851,0.373,90.9,Intense / Powerful,Synthetic project features; not official Spotify metrics
+moodify_0164,Poker Face,Lady Gaga,89,0.716,0.609,0.707,141.6,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0165,Just Dance,Lady Gaga,65,0.64,0.615,0.705,152.8,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0166,Born This Way,Lady Gaga,73,0.511,0.815,0.187,93.4,Intense / Powerful,Synthetic project features; not official Spotify metrics
+moodify_0167,Paparazzi,Lady Gaga,97,0.915,0.857,0.904,116.8,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0168,Alejandro,Lady Gaga,89,0.796,0.712,0.877,96.5,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0169,The Edge of Glory,Lady Gaga,89,0.801,0.661,0.88,93.1,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0170,Rain on Me,Lady Gaga,63,0.877,0.88,0.86,102.9,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0171,Levitating,Dua Lipa,96,0.949,0.895,0.845,146.6,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0172,Don't Start Now,Dua Lipa,90,0.704,0.765,0.827,150.2,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0173,Houdini,Dua Lipa,78,0.784,0.833,0.762,96.0,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0174,Training Season,Dua Lipa,65,0.866,0.798,0.891,86.6,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0175,New Rules,Dua Lipa,71,0.732,0.729,0.877,150.5,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0176,Physical,Dua Lipa,80,0.519,0.834,0.162,152.0,Intense / Powerful,Synthetic project features; not official Spotify metrics
+moodify_0177,Dance The Night,Dua Lipa,75,0.751,0.697,0.656,153.1,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0178,Love Again,Dua Lipa,61,0.358,0.355,0.437,87.5,Calm / Chill,Synthetic project features; not official Spotify metrics
+moodify_0179,Break My Heart,Dua Lipa,75,0.677,0.621,0.858,89.3,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0180,Hallucinate,Dua Lipa,77,0.811,0.791,0.67,102.1,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0181,vampire,Olivia Rodrigo,65,0.566,0.742,0.357,135.5,Intense / Powerful,Synthetic project features; not official Spotify metrics
+moodify_0182,drivers license,Olivia Rodrigo,81,0.316,0.469,0.228,128.8,Sad / Melancholic,Synthetic project features; not official Spotify metrics
+moodify_0183,good 4 u,Olivia Rodrigo,77,0.474,0.939,0.159,105.6,Intense / Powerful,Synthetic project features; not official Spotify metrics
+moodify_0184,deja vu,Olivia Rodrigo,82,0.501,0.452,0.679,89.6,Calm / Chill,Synthetic project features; not official Spotify metrics
+moodify_0185,traitor,Olivia Rodrigo,90,0.273,0.329,0.288,135.1,Sad / Melancholic,Synthetic project features; not official Spotify metrics
+moodify_0186,bad idea right?,Olivia Rodrigo,93,0.672,0.703,0.621,98.2,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0187,get him back!,Olivia Rodrigo,92,0.812,0.799,0.845,109.7,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0188,obsessed,Olivia Rodrigo,66,0.822,0.791,0.91,92.7,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0189,all-american bitch,Olivia Rodrigo,93,0.61,0.844,0.399,137.1,Intense / Powerful,Synthetic project features; not official Spotify metrics
+moodify_0190,love is embarrassing,Olivia Rodrigo,89,0.857,0.665,0.892,139.8,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0191,That's What I Like,Bruno Mars,78,0.796,0.687,0.794,109.0,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0192,24K Magic,Bruno Mars,77,0.593,0.94,0.17,81.2,Intense / Powerful,Synthetic project features; not official Spotify metrics
+moodify_0193,Locked out of Heaven,Bruno Mars,78,0.513,0.761,0.173,98.2,Intense / Powerful,Synthetic project features; not official Spotify metrics
+moodify_0194,Treasure,Bruno Mars,79,0.804,0.739,0.748,90.4,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0195,Just the Way You Are,Bruno Mars,64,0.465,0.286,0.595,99.4,Calm / Chill,Synthetic project features; not official Spotify metrics
+moodify_0196,Grenade,Bruno Mars,96,0.817,0.749,0.706,95.9,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0197,When I Was Your Man,Bruno Mars,96,0.2,0.24,0.262,105.1,Sad / Melancholic,Synthetic project features; not official Spotify metrics
+moodify_0198,Uptown Funk,Bruno Mars,69,0.836,0.907,0.729,126.2,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0199,Die With A Smile,Bruno Mars,83,0.694,0.708,0.867,111.7,Happy / Energetic,Synthetic project features; not official Spotify metrics
+moodify_0200,Talking to the Moon,Bruno Mars,97,0.2,0.356,0.195,143.3,Sad / Melancholic,Synthetic project features; not official Spotify metrics
