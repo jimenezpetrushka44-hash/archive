@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moodify</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+</head>
+<body>
+    <main class="chat">
+        <header class="chat-header">
+            <h1>Moodify</h1>
+            <p>Music for every mood, we stick out for you ☆*: .｡. o</p>
+        </header>
+
+       <section
+    class="chat-messages"
+    id="chat-messages"
+    aria-label="Chat with Myssy"
+    aria-live="polite"
+>
+    <article class="message message-bot">
+        <img
+            class="avatar"
+            src="{{ url_for('static', filename='images/missy_hello.png') }}"
+            alt="Myssy"
+        >
+
+        <div class="message-content">
+            <span class="message-author">Moodify</span>
+
+            <div class="message-bubble">
+                Hello! I'm Myssy, tell me your mood and I'll try
+                to find some songs to match it.
+            </div>
+        </div>
+    </article>
+</section>
+
+<form
+    class="chat-form"
+    id="chat-form"
+    data-user-avatar="{{ url_for('static', filename='images/pochacco.jpg') }}"
+>
+            <label for="message-input">How do u feel?</label>
+
+            <div class="input-container">
+                <input
+                    type="text"
+                    id="message-input"
+                    name="message"
+                    placeholder="Write down how you feel...(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧"
+                    autocomplete="off"
+                    required
+                >
+
+                <button type="submit">Send</button>
+            </div>
+        </form>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
