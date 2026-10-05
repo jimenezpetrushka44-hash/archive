@@ -2,16 +2,15 @@ import pandas as pd
 from transformers import pipeline
 
 
-# ============================================================
-# 1. LOAD DATASET
-# ============================================================
+
+#LOAD DATASET
+
 
 df = pd.read_csv("universal_top_spotify_songs.csv")
 
 
-# ============================================================
-# 2. CLEAN DATASET
-# ============================================================
+
+# CLEAN DATASET
 
 # Keep only the columns Moodify needs
 df = df[
@@ -47,9 +46,9 @@ df = df.drop_duplicates(
 ).reset_index(drop=True)
 
 
-# ============================================================
-# 3. CLASSIFY SONGS BY MOOD
-# ============================================================
+
+# CLASSIFY SONGS BY MOOD
+
 
 def classify_song_mood(row):
 
@@ -84,9 +83,9 @@ df["mood"] = df.apply(
 )
 
 
-# ============================================================
-# 4. LOAD SENTIMENT ANALYSIS MODEL
-# ============================================================
+
+# LOAD SENTIMENT ANALYSIS MODEL
+
 
 sentiment_pipeline = pipeline(
     task="sentiment-analysis",
@@ -94,9 +93,9 @@ sentiment_pipeline = pipeline(
 )
 
 
-# ============================================================
-# 5. RECOMMENDATION FUNCTION
-# ============================================================
+
+# RECOMMENDATION FUNCTION
+
 
 def recommend_song(user_text):
 
@@ -107,9 +106,9 @@ def recommend_song(user_text):
     confidence = result[0]["score"]
 
 
-    # --------------------------------------------------------
+
     # Convert sentiment into a musical mood
-    # --------------------------------------------------------
+ 
 
     if sentiment == "POSITIVE":
 
@@ -128,18 +127,15 @@ def recommend_song(user_text):
             target_mood = "neutral"
 
 
-    # --------------------------------------------------------
     # Find songs matching the mood
-    # --------------------------------------------------------
 
     songs = df[
         df["mood"] == target_mood
     ]
 
 
-    # --------------------------------------------------------
     # Prefer popular / recognizable songs
-    # --------------------------------------------------------
+
 
     popular_songs = songs[
         songs["popularity"] >= 60
@@ -150,18 +146,16 @@ def recommend_song(user_text):
         songs = popular_songs
 
 
-    # --------------------------------------------------------
     # Choose 5 random recommendations
-    # --------------------------------------------------------
+
 
     recommendations = songs.sample(
         n=min(5, len(songs))
     )
 
 
-    # --------------------------------------------------------
     # Convert Pandas rows into normal Python dictionaries
-    # --------------------------------------------------------
+
 
     song_list = []
 
@@ -183,10 +177,8 @@ def recommend_song(user_text):
             }
         )
 
-
-    # --------------------------------------------------------
     # Return result
-    # --------------------------------------------------------
+
 
     return {
         "sentiment": sentiment,
