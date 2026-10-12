@@ -1,0 +1,9 @@
+# Tested with Python 3.12. Install: python -m pip install -r requirements.txt
+Flask==3.1.3
+pandas==3.0.6
+transformers==5.5.0
+torch==2.11.0
+huggingface-hub==1.9.0
+safetensors==0.7.0
+
+# Download the emotion model separately: python setup_emotions.py
