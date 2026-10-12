@@ -1,6 +1,10 @@
 :root { color-scheme: light; --bg:#fcf4f7; --surface:#fffafd; --card:#fff; --text:#4d354d; --muted:#796678; --line:#ead9e7; --pink:#f8e0ec; --lilac:#eee4fa; --accent:#87517c; --accent-text:#fff; --shadow:0 20px 65px #613b6510; }
 :root[data-theme="dark"] { color-scheme:dark; --bg:#191421; --surface:#241d2e; --card:#302638; --text:#f4e8f2; --muted:#c5adc6; --line:#4d3a56; --pink:#493046; --lilac:#3b2e51; --accent:#e4aed8; --accent-text:#2d2035; --shadow:0 20px 65px #0003; }
 * { box-sizing:border-box; }
+#artist-mode { width:100%; padding:10px; margin-bottom:4px; border:1px solid var(--line); border-radius:12px; color:var(--text); background:var(--card); font:inherit; font-size:12px; }
+.discovery-actions { display:flex; flex-wrap:wrap; align-items:center; gap:8px; padding:10px 18px; }
+#history-count { font-size:11px; color:var(--muted); }
+select:focus-visible { outline:3px solid var(--accent); outline-offset:3px; }
 body { margin:0; min-height:100dvh; background:radial-gradient(ellipse at 5% 40%,var(--lilac),transparent 55%),radial-gradient(ellipse at 95% 10%,var(--pink),transparent 50%),var(--bg); color:var(--text); font-family:"Segoe UI",sans-serif; }
 button,input { font:inherit; }
 button,a,input { -webkit-tap-highlight-color:transparent; }

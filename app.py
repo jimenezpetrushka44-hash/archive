@@ -4,9 +4,10 @@ import re
 from flask import Flask, render_template, request, jsonify
 from recommender import recommend_song, df
 from artist_preferences import artist_names, build_aliases, normalize, parse_preferences
+from emotion_detector import detect_emotions
 
 app = Flask(__name__)
-app.config["MAX_CONTENT_LENGTH"] = 32 * 1024
+app.config["MAX_CONTENT_LENGTH"] = 300 * 1024
 ARTIST_ALIASES = build_aliases(df)
 KNOWN_ARTISTS = set(ARTIST_ALIASES.values())
 MOOD_PROFILES = {"happy": (.85, .8), "calm": (.7, .3), "sad": (.2, .3),
@@ -28,40 +29,47 @@ def clean_preferences(value):
     return result
 
 
-def personalize_result(result, preferences):
+def personalize_result(result, preferences, artist_mode="prefer", seen_ids=None):
     mood = result["mood"]
     valence, energy = MOOD_PROFILES[mood]
     liked, disliked = set(preferences["liked"]), set(preferences["disliked"])
     candidates = df.copy()
     names = candidates.artists.map(lambda value: set(artist_names(value)))
     allowed = names.map(lambda artists: not bool(artists & disliked))
-    if liked:
+    if liked and artist_mode == "only":
         allowed &= names.map(lambda artists: bool(artists & liked))
     candidates = candidates.loc[allowed].dropna(subset=["valence", "energy", "popularity"])
     candidates = candidates.loc[candidates.spotify_id.astype(str).str.fullmatch(r"[A-Za-z0-9]{22}")].copy()
     finite = candidates[["valence", "energy", "popularity"]].apply(lambda col: col.map(lambda n: math.isfinite(float(n)))).all(axis=1)
     candidates = candidates.loc[finite].copy()
+    eligible_count = len(candidates)
+    candidates = candidates.loc[~candidates.spotify_id.isin(seen_ids or [])].copy()
+    candidates["favorite"] = candidates.artists.map(lambda value: bool(set(artist_names(value)) & liked))
     candidates["distance"] = (candidates.valence - valence) ** 2 + (candidates.energy - energy) ** 2
     candidates["mood_match"] = candidates.mood == mood
-    candidates = candidates.sort_values(["mood_match", "distance", "popularity", "spotify_id"],
-                                        ascending=[False, True, False, True])
+    candidates = candidates.sort_values(["favorite", "mood_match", "distance", "popularity", "spotify_id"],
+                                        ascending=[False, False, True, False, True])
+    remaining_count = candidates.spotify_id.nunique()
     candidates = candidates.drop_duplicates("spotify_id").head(5)
     songs = []
     for _, song in candidates.iterrows():
-        songs.append({"name": str(song["name"]), "artist": str(song.artists),
+        songs.append({"spotify_id": str(song.spotify_id), "name": str(song["name"]), "artist": str(song.artists),
                       "album": song.album_name if isinstance(song.album_name, str) else "Álbum no disponible",
                       "popularity": int(song.popularity), "valence": float(song.valence),
                       "energy": float(song.energy), "mood": str(song.mood),
                       "spotify_url": "https://open.spotify.com/track/" + str(song.spotify_id)})
     notices = []
-    if not songs:
+    if not songs and eligible_count:
+        notices.append("Ya viste todas las canciones disponibles con estos filtros. Cambiá los filtros o reiniciá el historial para volver a escucharlas.")
+    elif not songs:
         notices.append("No hay canciones con estos filtros. Quitá un artista preferido o una exclusión para ampliar la búsqueda.")
     elif any(song["mood"] != mood for song in songs):
         notices.append("Completamos la selección con otros moods disponibles, respetando tus filtros de artistas.")
     if songs and len(songs) < 5:
         quantity = "1 canción disponible" if len(songs) == 1 else f"{len(songs)} canciones disponibles"
-        notices.append(f"El catálogo tiene {quantity} con estos filtros.")
-    return {**result, "songs": songs, "notices": notices, "preferences": preferences}
+        notices.append(f"Quedan {quantity} sin mostrar con estos filtros.")
+    return {**result, "songs": songs, "notices": notices, "preferences": preferences,
+            "artist_mode": artist_mode, "has_more": remaining_count > len(songs)}
 
 
 @app.get("/")
@@ -84,6 +92,13 @@ def recommend():
         return jsonify(error="Escribí cómo te sentís o qué artista querés escuchar."), 400
     if len(message) > 500:
         return jsonify(error="Usá un mensaje de hasta 500 caracteres."), 400
+    artist_mode = data.get("artist_mode", "prefer")
+    if artist_mode not in ("prefer", "only"):
+        return jsonify(error="Elegí un modo de artistas válido."), 400
+    seen_ids = data.get("seen_ids", [])
+    if (not isinstance(seen_ids, list) or len(seen_ids) > 10000 or
+            any(not isinstance(value, str) or not re.fullmatch(r"[A-Za-z0-9]{22}", value) for value in seen_ids)):
+        return jsonify(error="El historial de canciones no es válido. Reinicialo para continuar."), 400
     last_mood = data.get("last_mood", "neutral")
     if not isinstance(last_mood, str) or last_mood not in MOOD_PROFILES:
         return jsonify(error="El mood anterior no es válido."), 400
@@ -97,32 +112,38 @@ def recommend():
         text = ""
     if re.fullmatch(r"(?:hello|hi|hey|hola)(?:\s+(?:moodify|myssy))?", text):
         return jsonify(kind="greeting", reply="¡Hello! ¿Cómo te sentís hoy? También podés decirme qué artista querés escuchar.",
-                       songs=[], preferences=previous, mood=last_mood, notices=[])
+                       songs=[], preferences=previous, mood=last_mood, notices=[], artist_mode=artist_mode)
     preferences, mood_text, updates, unknown = parse_preferences(text, previous, ARTIST_ALIASES)
     if text in ARTIST_ALIASES:
         name = ARTIST_ALIASES[text]
         preferences["liked"] = [name]
         preferences["disliked"] = [n for n in preferences["disliked"] if n != name]
         mood_text = ""
+        artist_mode = "only"
     try:
         preferences = clean_preferences(preferences)
     except ValueError as error:
         return jsonify(error=str(error)), 400
     result = {"mood": last_mood, "sentiment": None, "confidence": None}
     notices = []
-    if mood_text and mood_text not in {"recomendar", "recommend", "mas canciones", "more songs"}:
+    if mood_text and mood_text not in {"recomendar", "recommend", "mas canciones", "more songs", "otra seleccion"}:
         try:
-            prediction = recommend_song(mood_text)
+            prediction = detect_emotions(mood_text if updates or unknown else message.strip())
             if prediction.get("mood") not in MOOD_PROFILES:
                 raise ValueError("Invalid model mood")
-            result.update({key: prediction.get(key) for key in ("mood", "sentiment", "confidence")})
+            result.update(prediction)
+            if prediction.get("uncertain"):
+                notices.append("No encontramos una emoción clara. Usamos música neutral; podés describir un poco más cómo te sentís.")
+            elif prediction.get("mixed"):
+                notices.append("El texto muestra varias emociones. La selección musical es una aproximación.")
         except Exception:
-            app.logger.exception("Sentiment analysis failed")
-            notices.append("No pudimos analizar el texto. Usamos el último mood (o neutral) y respetamos tus artistas.")
+            app.logger.exception("Multilingual emotion analysis failed")
+            result["emotion_source"] = "unavailable"
+            notices.append("El detector de emociones no está disponible. Usamos el último mood (o neutral) y respetamos tus artistas. Si falta el modelo, ejecutá setup_emotions.py.")
     if unknown:
         notices.append("No reconocimos: " + ", ".join(unknown) + ". No se aplicó ese filtro; elegí el nombre desde la lista de artistas.")
     try:
-        result = personalize_result(result, preferences)
+        result = personalize_result(result, preferences, artist_mode, seen_ids)
         result["notices"] = notices + result["notices"]
         result["kind"] = "recommendations"
         return jsonify(result)

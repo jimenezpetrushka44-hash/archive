@@ -10,10 +10,21 @@ const moodNames = { happy: "Feliz", sad: "Triste", calm: "Calmado", intense: "In
 let preferences = { liked: [], disliked: [] };
 let lastMood = "neutral";
 let isLoading = false;
+let artistMode = "prefer";
+let seenIds = [];
+const modeSelect = document.getElementById("artist-mode");
+
+function renderDiscovery() {
+    modeSelect.value = artistMode;
+    document.getElementById("artist-mode-help").textContent = artistMode === "only"
+        ? "Solo los artistas seleccionados. Sin favoritos, se busca en todo el catálogo."
+        : "Primero tus favoritos; después descubrí otros artistas. Las exclusiones siempre se respetan.";
+    document.getElementById("history-count").textContent = `${seenIds.length} canciones mostradas`;
+}
 
 // Storage is optional: private browsing or blocked storage must not break the chat.
 function saveState() {
-    try { sessionStorage.setItem("moodify-session", JSON.stringify({ preferences, lastMood })); } catch (_) {}
+    try { sessionStorage.setItem("moodify-session", JSON.stringify({ preferences, lastMood, artistMode, seenIds })); } catch (_) {}
 }
 try {
     const saved = JSON.parse(sessionStorage.getItem("moodify-session"));
@@ -23,6 +34,8 @@ try {
         }
         preferences.liked = preferences.liked.filter(name => !preferences.disliked.includes(name));
         if (Object.hasOwn(moodNames, saved.lastMood)) lastMood = saved.lastMood;
+        if (["prefer", "only"].includes(saved.artistMode)) artistMode = saved.artistMode;
+        if (Array.isArray(saved.seenIds)) seenIds = [...new Set(saved.seenIds.filter(id => typeof id === "string" && /^[A-Za-z0-9]{22}$/.test(id)))].slice(0, 10000);
     }
 } catch (_) {}
 
@@ -100,6 +113,13 @@ function addMessage(text, user = false) {
 }
 function showSongs(data) {
     const bubble = addMessage(data.kind === "greeting" ? data.reply : `${data.songs.length} canciones para vos · Mood: ${moodNames[data.mood] || data.mood}`);
+    if (data.emotion_source === "multilingual_model") {
+        const labels = { joy: "alegría", sadness: "tristeza", anger: "enojo", frustration: "frustración", fear: "miedo", love: "amor", gratitude: "gratitud", disgust: "desagrado", contempt: "desprecio", neutral: "neutral", surprise: "sorpresa" };
+        const emotion = document.createElement("p");
+        emotion.className = "notice";
+        emotion.textContent = data.uncertain ? "Emoción: no concluyente" : `Emociones sugeridas por el texto: ${(data.emotions || []).map(item => labels[item.label] || item.label).join(", ")}.`;
+        bubble.append(emotion);
+    }
     for (const notice of data.notices || []) {
         const text = document.createElement("p"); text.className = "notice"; text.textContent = notice; bubble.append(text);
     }
@@ -120,8 +140,9 @@ function showSongs(data) {
 }
 function setLoading(value) {
     isLoading = value;
-    for (const button of document.querySelectorAll(".preferences-panel button, .suggestions button, #send-button")) button.disabled = value;
+    for (const button of document.querySelectorAll(".preferences-panel button, .suggestions button, .discovery-actions button, #send-button")) button.disabled = value;
     artistInput.disabled = value;
+    modeSelect.disabled = value;
     chatMessages.setAttribute("aria-busy", String(value));
     statusText.textContent = value ? "Buscando canciones para vos…" : "";
     document.getElementById("send-button").textContent = value ? "Buscando…" : "Enviar ↗";
@@ -136,12 +157,15 @@ async function sendMessage(message) {
     const timer = setTimeout(() => controller.abort(), 60000);
     try {
         const response = await fetch("/recommend", { method: "POST", headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ message, preferences, last_mood: lastMood }), signal: controller.signal });
+            body: JSON.stringify({ message, preferences, last_mood: lastMood, artist_mode: artistMode, seen_ids: seenIds }), signal: controller.signal });
         let data;
         try { data = await response.json(); } catch (_) { throw new Error("El servidor no respondió correctamente. Verificá que Flask esté funcionando."); }
         if (!response.ok) throw new Error(data.error || "No se pudo completar la búsqueda.");
         if (!Array.isArray(data.songs) || !data.preferences || !Object.hasOwn(moodNames, data.mood)) throw new Error("La respuesta está incompleta. Intentá de nuevo.");
-        preferences = data.preferences; lastMood = data.mood; saveState(); renderPreferences(); showSongs(data);
+        preferences = data.preferences; lastMood = data.mood;
+        if (["prefer", "only"].includes(data.artist_mode)) artistMode = data.artist_mode;
+        seenIds = [...new Set([...seenIds, ...data.songs.map(song => song.spotify_id).filter(id => typeof id === "string" && /^[A-Za-z0-9]{22}$/.test(id))])];
+        saveState(); renderPreferences(); renderDiscovery(); showSongs(data);
     } catch (error) {
         const bubble = addMessage(error.name === "AbortError" ? "La búsqueda tardó demasiado. Podés volver a intentarlo." : error instanceof TypeError ? "No hay conexión con Flask. Revisá el servidor y volvé a intentar." : error.message);
         const retry = document.createElement("button"); retry.type = "button"; retry.className = "soft-button"; retry.textContent = "Reintentar";
@@ -158,4 +182,15 @@ form.addEventListener("submit", event => {
 });
 document.querySelectorAll("[data-message]").forEach(button => button.addEventListener("click", () => sendMessage(button.dataset.message)));
 document.getElementById("apply-filters").addEventListener("click", () => sendMessage("Recomendar"));
+modeSelect.addEventListener("change", () => {
+    artistMode = modeSelect.value; saveState(); renderDiscovery();
+    filterStatus.textContent = "Modo actualizado. Presioná Buscar para aplicar el cambio.";
+});
+document.getElementById("another-selection").addEventListener("click", () => sendMessage("Otra selección"));
+document.getElementById("reset-history").addEventListener("click", () => {
+    if (isLoading) return;
+    seenIds = []; saveState(); renderDiscovery();
+    statusText.textContent = "Historial reiniciado. Podés volver a recibir canciones anteriores.";
+});
 renderPreferences();
+renderDiscovery();

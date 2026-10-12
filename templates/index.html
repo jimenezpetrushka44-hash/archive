@@ -30,6 +30,12 @@
                     <div class="filter-actions"><button type="button" id="like-artist" class="soft-button">♡ Me gusta</button><button type="button" id="exclude-artist" class="soft-button">− Excluir</button></div>
                     <p id="filter-status" role="status"></p>
                     <div id="preference-chips" aria-label="Filtros activos"></div>
+                    <label for="artist-mode">Cómo usar mis favoritos</label>
+                    <select id="artist-mode" aria-describedby="artist-mode-help">
+                        <option value="prefer">Priorizar mis favoritos</option>
+                        <option value="only">Solo estos artistas</option>
+                    </select>
+                    <p id="artist-mode-help">Primero tus favoritos; después descubrí otros artistas. Las exclusiones siempre se respetan.</p>
                     <button type="button" id="apply-filters" class="primary-button">Buscar con mis filtros ↗</button>
                 </section>
                 <p class="sidebar-note">Hecho para tus días rosas<br>y tus noches lilas. ☾</p>
@@ -37,10 +43,15 @@
             <section class="chat" aria-label="Chat musical">
                 <header class="chat-header"><div class="chat-heading"><span class="online-dot" aria-hidden="true"></span><div><h2>Tu sesión con Myssy</h2><p>Descubrí tu próxima canción favorita</p></div></div><span class="header-flower" aria-hidden="true">✿</span></header>
                 <div class="chat-messages" id="chat-messages" role="log" aria-live="polite" aria-label="Conversación">
-                    <article class="message message-bot"><img class="avatar" src="{{ url_for('static', filename='images/missy_hello.png') }}" alt=""><div class="message-content"><span class="message-author">MYSSY · PARA VOS</span><div class="message-bubble"><h3>Tu soundtrack empieza acá ♡</h3><p>Contame cómo te sentís o escribí un artista. También podés decir «me gusta ILLIT» o «no me gusta Bad Bunny».</p><p class="hint">Para analizar emociones, el modelo funciona mejor con mensajes en inglés.</p></div></div></article>
+                    <article class="message message-bot"><img class="avatar" src="{{ url_for('static', filename='images/missy_hello.png') }}" alt=""><div class="message-content"><span class="message-author">MYSSY · PARA VOS</span><div class="message-bubble"><h3>Tu soundtrack empieza acá ♡</h3><p>Contame cómo te sentís o escribí un artista. También podés decir «me gusta ILLIT» o «no me gusta Bad Bunny».</p><p class="hint">Podés escribir en español o inglés. La emoción detectada es una estimación, no una certeza.</p></div></div></article>
                     <div class="suggestions" aria-label="Mensajes de ejemplo"><button type="button" data-message="I feel happy today">☀ Un día feliz</button><button type="button" data-message="I feel sad today">☁ Un día sensible</button><button type="button" data-message="me gusta Sabrina">♡ Escuchar Sabrina</button></div>
                 </div>
                 <p id="request-status" class="request-status" role="status"></p>
+                <div class="discovery-actions">
+                    <button type="button" id="another-selection" class="soft-button">♫ Otra selección</button>
+                    <button type="button" id="reset-history" class="text-button">Reiniciar historial</button>
+                    <span id="history-count" role="status">0 canciones mostradas</span>
+                </div>
                 <form class="chat-form" id="chat-form" data-user-avatar="{{ url_for('static', filename='images/pochacco.jpg') }}" data-bot-avatar="{{ url_for('static', filename='images/missy_hello.png') }}">
                     <label for="message-input">¿Qué suena bien hoy?</label>
                     <div class="input-container"><input type="text" id="message-input" placeholder="Tu mood, tu artista, tu momento…" autocomplete="off" maxlength="500" required><button type="submit" class="primary-button" id="send-button">Enviar ↗</button></div>

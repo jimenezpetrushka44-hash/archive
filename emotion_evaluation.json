@@ -1,0 +1,153 @@
+{
+  "model": "tabularisai/multilingual-emotion-classification",
+  "revision": "a2b9b4d9640c53e84ab7abdd2a66146d3dafb10c",
+  "cases": 16,
+  "expected_label_present": 16,
+  "limitation": "Handwritten smoke cases, not held-out accuracy or precision.",
+  "results": [
+    {
+      "text": "Estoy muy feliz porque aprobé mi examen",
+      "expected": "joy",
+      "detected": [
+        "joy"
+      ],
+      "mood": "happy",
+      "hit": true
+    },
+    {
+      "text": "Me siento triste y tengo ganas de llorar",
+      "expected": "sadness",
+      "detected": [
+        "sadness"
+      ],
+      "mood": "sad",
+      "hit": true
+    },
+    {
+      "text": "Estoy furiosa, me mintieron otra vez",
+      "expected": "anger",
+      "detected": [
+        "anger"
+      ],
+      "mood": "intense",
+      "hit": true
+    },
+    {
+      "text": "Tengo miedo de lo que pueda pasar mañana",
+      "expected": "fear",
+      "detected": [
+        "fear"
+      ],
+      "mood": "calm",
+      "hit": true
+    },
+    {
+      "text": "Estoy frustrada porque nada sale como esperaba",
+      "expected": "frustration",
+      "detected": [
+        "frustration"
+      ],
+      "mood": "intense",
+      "hit": true
+    },
+    {
+      "text": "Te amo y me encanta estar contigo",
+      "expected": "love",
+      "detected": [
+        "love"
+      ],
+      "mood": "calm",
+      "hit": true
+    },
+    {
+      "text": "Gracias por ayudarme, te lo agradezco mucho",
+      "expected": "gratitude",
+      "detected": [
+        "gratitude"
+      ],
+      "mood": "calm",
+      "hit": true
+    },
+    {
+      "text": "No estoy feliz, estoy muy triste",
+      "expected": "sadness",
+      "detected": [
+        "sadness"
+      ],
+      "mood": "sad",
+      "hit": true
+    },
+    {
+      "text": "I am so happy I passed my exam",
+      "expected": "joy",
+      "detected": [
+        "joy"
+      ],
+      "mood": "happy",
+      "hit": true
+    },
+    {
+      "text": "I feel lonely and sad and want to cry",
+      "expected": "sadness",
+      "detected": [
+        "sadness"
+      ],
+      "mood": "sad",
+      "hit": true
+    },
+    {
+      "text": "I am furious that they lied to me again",
+      "expected": "anger",
+      "detected": [
+        "anger"
+      ],
+      "mood": "intense",
+      "hit": true
+    },
+    {
+      "text": "I am scared of what might happen tomorrow",
+      "expected": "fear",
+      "detected": [
+        "fear"
+      ],
+      "mood": "calm",
+      "hit": true
+    },
+    {
+      "text": "I feel frustrated because nothing works",
+      "expected": "frustration",
+      "detected": [
+        "frustration"
+      ],
+      "mood": "intense",
+      "hit": true
+    },
+    {
+      "text": "I love you and love spending time with you",
+      "expected": "love",
+      "detected": [
+        "love"
+      ],
+      "mood": "calm",
+      "hit": true
+    },
+    {
+      "text": "Thank you so much for helping me",
+      "expected": "gratitude",
+      "detected": [
+        "gratitude"
+      ],
+      "mood": "calm",
+      "hit": true
+    },
+    {
+      "text": "I am not happy, I am very sad",
+      "expected": "sadness",
+      "detected": [
+        "sadness"
+      ],
+      "mood": "sad",
+      "hit": true
+    }
+  ]
+}

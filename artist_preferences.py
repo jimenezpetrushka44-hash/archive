@@ -40,6 +40,9 @@ def parse_preferences(message, previous, aliases):
         stop = FEELING.search(clause)
         if stop:
             clause = clause[:stop.start()]
+        # Personal statements are feelings, not artist commands ("I love you").
+        if re.match(r"(?:you|my|our|mi|mis|tu|tus|estar|sentirme|como|how|being)\b", clause.strip()):
+            continue
         remaining = clause.strip(" ,.!?;:")
         found = []
         while remaining:
